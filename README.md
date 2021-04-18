@@ -1,24 +1,25 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+This is a reference rails application that shows an implementation with all vital security controls.
 
 * Ruby version
 
+`3.0.0`
+
 * System dependencies
+
+- Postgres 13.2
+- Devise for authentication with use of bcrypt
+- Minitest
 
 * Configuration
 
-* Database creation
-
-* Database initialization
+- All routes require authentication
 
 * How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+`rails test test/`
 
 * Deployment instructions
 
-* ...
+- Deployed to Heroku `https://stark-peak-52834.herokuapp.com/`
