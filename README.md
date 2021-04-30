@@ -37,3 +37,7 @@ Brakeman is a command-line tool that analyzes the source code of Ruby on Rails a
 - Install with `bundle install`
 - Run at app root with  `$ brakeman`
 - [Result from April 30th](./brakeman_results.txt)
+
+### Dependabot Alerts
+Dependabot is integrated on our Github repository to get notified when one of our dependencies has a vulnerability. Dependabot will automatically keep our application up-to-date by updating dependencies in response to these alerts.
+
