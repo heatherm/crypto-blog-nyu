@@ -21,6 +21,9 @@
         <a href="/"><span class="font-semibold text-xl tracking-tight">Blog</span></a>
         <div class="md:items-center md:w-auto flex">
           <div class="flex text-sm" v-else>
+            <%= link_to "Profile", edit_user_registration_path, class: 'p-3 block bg-indigo-500 hover:bg-indigo-400 focus:bg-indigo-400 text-white font-semibold rounded-lg'  %>
+          </div>
+          <div class="flex text-sm" v-else>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: 'p-3 block bg-indigo-500 hover:bg-indigo-400 focus:bg-indigo-400 text-white font-semibold rounded-lg'  %>
           </div>
         </div>
