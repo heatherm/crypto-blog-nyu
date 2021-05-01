@@ -1,20 +1,44 @@
 <div class="lg:flex lg:items-center lg:justify-between">
   <div class="flex-1 min-w-0">
-    <h1 class="text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate">
-      Articles
-    </h1>
 
-    <ul>
+    <%= link_to "New Article", new_article_path, class: 'm-2 p-3 block bg-indigo-500 hover:bg-indigo-400 focus:bg-indigo-400 text-white font-semibold rounded-lg' %>
+
+    <table class='mx-auto max-w-4xl w-full whitespace-nowrap rounded-lg bg-white divide-y divide-gray-300 overflow-hidden'>
+      <thead class="bg-gray-50">
+      <tr class="text-gray-600 text-left">
+        <th class="font-semibold text-sm uppercase px-6 py-4">
+          Title
+        </th>
+        <th class="font-semibold text-sm uppercase px-6 py-4">
+          Body
+        </th>
+
+        <th class="font-semibold text-sm uppercase px-6 py-4">
+
+        </th>
+      </tr>
+      </thead>
+      <tbody class="divide-y divide-gray-200">
       <% @articles.each do |article| %>
-        <li>
-          <%= link_to article.title, article %>
-        </li>
-      <% end %>
-    </ul>
+      <tr>
+        <td class="px-6 py-4">
+          <div class="flex items-center space-x-3">
+            <%= link_to article.title, article %>
+          </div>
+        </td>
+        <td class="px-6 py-4">
+          <div class="flex items-center space-x-3">
+            <%= link_to article.body, article %>
+          </div>
+        </td>
+      </tr>
+        <% end %>
+      </tbody>
+    </table>
+
 
   </div>
-  <%= link_to "New Article", new_article_path %>
-  <%= button_to "logout", destroy_user_session_path, method: :delete  %>
+
 </div>
 
 

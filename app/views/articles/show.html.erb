@@ -1,10 +1,40 @@
-<h1><%= @article.title %></h1>
+<table class='mx-auto max-w-4xl w-full whitespace-nowrap rounded-lg bg-white divide-y divide-gray-300 overflow-hidden'>
+  <thead class="bg-gray-50">
+  <tr class="text-gray-600 text-left">
+    <th class="font-semibold text-sm uppercase px-6 py-4">
+      Title
+    </th>
+    <th class="font-semibold text-sm uppercase px-6 py-4">
+      Body
+    </th>
 
-<p><%= @article.body %></p>
+    <th class="font-semibold text-sm uppercase px-6 py-4">
+
+    </th>
+  </tr>
+  </thead>
+  <tbody class="divide-y divide-gray-200">
+    <tr>
+      <td class="px-6 py-4">
+        <div class="flex items-center space-x-3">
+          <%=  @article.title %>
+        </div>
+      </td>
+      <td class="px-6 py-4">
+        <div class="flex items-center space-x-3">
+          <%=  @article.body %>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
 
 <ul>
-  <li><%= link_to "Edit", edit_article_path(@article) %></li>
+  <li><%= link_to "Edit", edit_article_path(@article), class: 'm-2 p-3 block bg-indigo-500 hover:bg-indigo-400 focus:bg-indigo-400 text-white font-semibold rounded-lg' %></li>
   <li><%= link_to "Destroy", article_path(@article),
+                  class: 'm-2 p-3 block bg-red-500 hover:bg-red-400 focus:bg-red-400 text-white font-semibold rounded-lg',
                   method: :delete,
                   data: { confirm: "Are you sure?" } %></li>
 </ul>
